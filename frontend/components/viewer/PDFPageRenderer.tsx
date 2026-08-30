@@ -1,8 +1,6 @@
 "use client";
 import React, { useCallback, useRef, useState } from "react";
 import { Document, Page, pdfjs } from "react-pdf";
-import "react-pdf/dist/Page/AnnotationLayer.css";
-import "react-pdf/dist/Page/TextLayer.css";
 import { AnswerRegion } from "@/lib/types";
 import { AnswerHighlight } from "./AnswerHighlight";
 
