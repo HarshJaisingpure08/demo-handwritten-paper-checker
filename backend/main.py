@@ -21,16 +21,12 @@ app = FastAPI(
     version="1.0.0",
 )
 
-# CORS
-allowed_origins = [settings.frontend_url]
-if settings.debug:
-    allowed_origins = ["*"]
-
+# CORS — allow origins dynamically & allow all origins for production flexibility
 app.add_middleware(
     CORSMiddleware,
-    allow_origins=allowed_origins,
-    allow_credentials=True,
-    allow_methods=["GET", "POST"],
+    allow_origins=["*"],
+    allow_credentials=False,
+    allow_methods=["*"],
     allow_headers=["*"],
 )
 
